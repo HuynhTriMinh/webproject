@@ -215,3 +215,70 @@ body
     text-align: center;
     padding-top: 50px;
 }
+.chitiet-sanphamcon img{
+    width: 25%;
+}
+.thongtin{
+    padding-top: 25px;
+}
+.chitiet-gia p{
+    margin: 0px;
+}
+.chitiet-gia b{
+    font-size: 25px;
+    color: red;
+}
+.chitiet-thuonghieu{
+    margin-top:5px;
+}
+.chitiet-thuonghieu p{
+    margin: 0px;
+}
+.chitiet-thuonghieu a{
+    text-decoration: none;
+}
+.chitiet-thuonghieu a:hover{
+    color: red;
+}
+.chitiet-mota{
+    font-size: 14px;
+    color: #555353;
+}
+.chitiet-soluong input{
+    width:60px;
+}
+.chitiet-soluong a{
+    margin-left: 10px;
+}
+.thongtinchitiet{
+    width: 100%;
+    text-align: center;
+}
+.giohang{
+    margin-top:15px;
+}
+.giohang1{
+    border: 1px solid #000;
+    text-align: center;
+}
+.giohang1 img{
+    width: 100%;
+}
+.sanpham{
+    width: 100%;
+}
+.giohang1 input{
+    width: 100%;
+}
+.giohang1 a{
+    text-decoration: none;
+}
+.tong-tien p{
+    float: right;
+}
+.tong-tien hr{
+    margin-top:2rem;
+}
+.tong-tien button{
+    float: right;
+}

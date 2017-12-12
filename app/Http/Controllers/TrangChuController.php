@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\SanPham;
+use App\HangSanXuat;
+use Cart;
 use Illuminate\Http\Request;
 
 class TrangChuController extends Controller
@@ -19,7 +21,16 @@ class TrangChuController extends Controller
 
 
     public function getChiTietSanPham($id){
-    	$sanpham = SanPham::orderBy("GiaSP","decs")->limit(5)->get();
-    	return view('page.trangchu',compact('sanpham'));
+    	$sanpham = SanPham::with('HangSanXuat')->where('idSP',$id)->first();
+    	return view('page.sanpham_chitiet',compact('sanpham'));
     }
+
+
+    // public function getGioHang($id){
+    //     $sanpham = SanPham::where('idSP', $id)->first();
+    //     Cart::add(array('id'=>$id, 'name'=>$sanpham->TenSP, 'qty'=>1, 'price'=>$sanpham->GiaSP, 'options'=>array('img', $sanpham->urlHinhSP)));
+    //     $content = Cart::content();
+       
+    //     return view('page.giohang',compact('sanpham'));
+    // }
 }

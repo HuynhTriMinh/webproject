@@ -22,7 +22,10 @@ Route::get('chitietsanpham/{id}',[
     'as' => 'chitietsanpham',
     'uses' => 'TrangChuController@getChiTietSanPham'
 ]);
-
+Route::get('giohang/{id}',[
+    'as' => 'giohang',
+    'uses' => 'TrangChuController@getGioHang'
+]);
 
 
 
