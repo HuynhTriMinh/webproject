@@ -10,7 +10,9 @@
                         </button>
                         <a class="navbar-brand" href=""> </a>
                     </div>
-
+                    <div style="float:right; margin-right:50px;font-size:20px;">
+                        <a href="{{route('dangxuat')}}">Logout</a>
+                    </div>
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav navbar-right">
 

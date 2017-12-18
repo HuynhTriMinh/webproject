@@ -25,7 +25,12 @@
                         </div>
                     </div>
                     <div class="row">
+
+                    <form action="{{route('timkiem')}}" method="POST">
+                    {{ csrf_field() }}
                         <input type="text" name="timkiem" placeholder="Nhập từ khóa cần tìm">
+                    </form>
+
                     </div>
                 </div>
             </div>

@@ -22,14 +22,103 @@ Route::get('chitietsanpham/{id}',[
     'as' => 'chitietsanpham',
     'uses' => 'TrangChuController@getChiTietSanPham'
 ]);
-Route::get('giohang/{id}',[
+Route::get('muahang/{id}',[
+    'as' => 'muahang',
+    'uses' => 'TrangChuController@getMuaHang'
+]);
+Route::get('giohang',[
     'as' => 'giohang',
     'uses' => 'TrangChuController@getGioHang'
+]);
+Route::get('xoasanpham/{id}',[
+    'as' => 'xoasanpham',
+    'uses' => 'TrangChuController@getXoaSanPham'
+]);
+
+Route::get('capnhat/{id}/{qty}',[
+    'as' => 'capnhat',
+    'uses' => 'SuaController@getCapNhat'
+]);
+
+Route::get('thanhtoan',[
+    'as' => 'thanhtoan',
+    'uses' => 'TrangChuController@getThanhToan'
+]);
+Route::post('thanhtoan',[
+    'as' => 'thanhtoan',
+    'uses' => 'TrangChuController@postThanhToan'
+]);
+
+//menu dưới footer và menu chính
+Route::get('hotrokhachhang',[
+    'as' => 'hotrokhachhang',
+    'uses' => 'TrangChuController@getHotrokhachhang'
+]);
+Route::get('hotrokythuat',[
+    'as' => 'hotrokythuat',
+    'uses' => 'TrangChuController@getHotrokythuat'
+]);
+Route::get('uytinchatluong',[
+    'as' => 'uytinchatluong',
+    'uses' => 'TrangChuController@getUytinchatluong'
+]);
+Route::get('tuvanmienphi',[
+    'as' => 'tuvanmienphi',
+    'uses' => 'TrangChuController@getTuvanmienphi'
+]);
+Route::get('khuyenmai',[
+    'as' => 'khuyenmai',
+    'uses' => 'TrangChuController@getKhuyenMai'
+]);
+Route::get('dichvu',[
+    'as' => 'dichvu',
+    'uses' => 'TrangChuController@getDichVu'
+]);
+Route::get('tin',[
+    'as' => 'tin',
+    'uses' => 'TrangChuController@getTinTuc'
+]);
+Route::get('lienhe',[
+    'as' => 'lienhe',
+    'uses' => 'TrangChuController@getLienHe'
+]);
+Route::get('gioithieu',[
+    'as' => 'gioithieu',
+    'uses' => 'TrangChuController@getGioiThieu'
+]);
+Route::get('chitiettin/{id}','TrangChuController@getChiTietTin')->name("chitiettin");
+
+
+
+Route::get('trangdienthoai',[
+	'as' => 'trangdienthoai',
+	'uses' => 'TrangChuController@getTrangDienThoai'
+]);
+Route::get('trangipad',[
+	'as' => 'trangipad',
+	'uses' => 'TrangChuController@getTrangIpad'
+]);
+Route::get('tranglaptop',[
+	'as' => 'tranglaptop',
+	'uses' => 'TrangChuController@getTrangLaptop'
+]);
+Route::get('trangphukien',[
+	'as' => 'trangphukien',
+	'uses' => 'TrangChuController@getTrangPhuKien'
+]);
+Route::post('timkiem',[
+	'as' => 'timkiem',
+	'uses' => 'TrangChuController@getTimKiem'
 ]);
 
 
 
-Route::group(['prefix'=>'admin'],function(){
+
+Route::get('dangnhap','TrangChuController@getDangNhap')->name('dangnhap');
+Route::post('dangnhap','TrangChuController@postDangNhap')->name('dangnhap');
+Route::get('dangxuat','TrangChuController@getDangXuat')->name('dangxuat');
+
+Route::group(['prefix'=>'admin', 'middleware'=>'Login'],function(){
 
     Route::get('/', [
         'as'   => 'dashboard',

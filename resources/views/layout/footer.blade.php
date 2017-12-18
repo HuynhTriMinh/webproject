@@ -10,10 +10,10 @@
                     <p><img src="images/footer_icon4.png">Website: http://didongshop.tk/</p>
                 </div>
                 <div class="col footer-mid">
-                    <p>HỖ TRỢ KHÁCH HÀNG</p>
-                    <p>Hỗ trợ kỹ thuật</p>
-                    <p>Tư vấn miễn phí</p>
-                    <p>Uy tín chất lượng</p>
+                    <p><a href="{{route('hotrokhachhang')}}">HỖ TRỢ KHÁCH HÀNG</a></p>
+                    <p><a href="{{route('hotrokythuat')}}">Hỗ trợ kỹ thuật</a></p>
+                    <p><a href="{{route('tuvanmienphi')}}">Tư vấn miễn phí</a></p>
+                    <p><a href="{{route('uytinchatluong')}}">Uy tín chất lượng</a></p>
                 </div>
                 <div class="col maps">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.950405147136!2d106.67612861480036!3d10.738305892347393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fad0158a09f%3A0xfd0a6159277a3508!2zMTgwIENhbyBM4buXLCBwaMaw4budbmcgNCwgUXXhuq1uIDgsIEjhu5MgQ2jDrSBNaW5o!5e0!3m2!1svi!2s!4v1511836220897" allowfullscreen></iframe>

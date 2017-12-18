@@ -12,15 +12,17 @@
             @foreach($sanpham_noibat as $sp)
              <div class="col">
                 <div class="row">
-                    <img src="images/sp_1.png">
+                    <div class="col home1">
+                        <img src="images/sanpham/{{ $sp->urlHinhSP }}">
+                    </div>
                 </div>
                 <div class="row ghi-chu">
                     <ul>
                         <a href="{{route('chitietsanpham', $sp->idSP)}}">{{$sp->TenSP}}</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
+                        <li>Giá cũ: {{number_format($sp->GiaCu)}} VNĐ</li>
                         <li>Giá: {{number_format($sp->GiaSP)}} VNĐ</li>
                         <div class="addtocart">
-                            <a href="#">Mua hàng</a>
+                            <a href="{{ route('muahang', $sp->idSP) }}">Mua hàng</a>
                         </div>
                     </ul>
                 </div>
@@ -30,7 +32,7 @@
     </div>
     <div class="container-fluid san-pham">
         <div class="row justify-content-md-center san-pham-noi-bat">
-            <a href="#">Điện Thoại</a>
+            <a href="{{ route('trangdienthoai') }}">Điện Thoại</a>
         </div>
         <div class="row justify-content-md-center">
             <img src="images/icon_trang.png" alt="">
@@ -39,15 +41,17 @@
             @foreach($dienthoai as $sp)
             <div class="col">
                 <div class="row">
-                    <img src="images/sp_1.png">
+                    <div class="col home1">
+                        <img src="images/sanpham/{{ $sp->urlHinhSP }}">
+                    </div>
                 </div>
                 <div class="row ghi-chu">
                     <ul>
                         <a href="{{route('chitietsanpham', $sp->idSP)}}">{{$sp->TenSP}}</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
+                        <li>Giá cũ: {{number_format($sp->GiaCu)}} VNĐ</li>
                         <li>Giá: {{number_format($sp->GiaSP)}} VNĐ</li>
                         <div class="addtocart">
-                            <a href="#">Mua hàng</a>
+                            <a href="{{ route('muahang', $sp->idSP) }}">Mua hàng</a>
                         </div>
                     </ul>
                 </div>
@@ -57,7 +61,7 @@
     </div>
     <div class="container-fluid san-pham">
         <div class="row justify-content-md-center san-pham-noi-bat">
-            <a href="#">Máy Tính Bảng</a>
+            <a href="{{ route('trangipad') }}">Máy Tính Bảng</a>
         </div>
         <div class="row justify-content-md-center">
             <img src="images/icon_trang.png" alt="">
@@ -66,15 +70,17 @@
             @foreach($maytinhbang as $sp)
             <div class="col">
                 <div class="row">
-                    <img src="images/sp_1.png">
+                    <div class="col home4">
+                        <img src="images/sanpham/{{ $sp->urlHinhSP }}">
+                    </div>
                 </div>
                 <div class="row ghi-chu">
                     <ul>
                         <a href="{{route('chitietsanpham', $sp->idSP)}}">{{$sp->TenSP}}</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
+                        <li>Giá cũ: {{number_format($sp->GiaCu)}} VNĐ</li>
                         <li>Giá: {{number_format($sp->GiaSP)}} VNĐ</li>
                         <div class="addtocart">
-                            <a href="#">Mua hàng</a>
+                            <a href="{{ route('muahang', $sp->idSP) }}">Mua hàng</a>
                         </div>
                     </ul>
                 </div>
@@ -84,167 +90,37 @@
     </div>
     <div class="container-fluid san-pham">
         <div class="row justify-content-md-center san-pham-noi-bat">
-            <a href="#">LAPTOP</a>
+            <a href="{{ route('tranglaptop') }}">LAPTOP</a>
         </div>
         <div class="row justify-content-md-center">
             <img src="images/icon_trang.png" alt="">
         </div>
         <div class="row home">
+            @foreach($laptop as $sp)
             <div class="col">
                 <div class="row">
-                    <img src="images/sp_1.png">
+                    <div class="col home4">
+                        <img src="images/sanpham/{{ $sp->urlHinhSP }}">
+                    </div>
                 </div>
                 <div class="row ghi-chu">
                     <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
+                        <a href="{{route('chitietsanpham', $sp->idSP)}}">{{$sp->TenSP}}</a>
+                        <li>Giá cũ: {{number_format($sp->GiaCu)}} VNĐ</li>
+                        <li>Giá: {{number_format($sp->GiaSP)}} VNĐ</li>
                         <div class="addtocart">
-                            <a href="#">Mua hàng</a>
+                            <a href="{{ route('muahang', $sp->idSP) }}">Mua hàng</a>
                         </div>
                     </ul>
                 </div>
             </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-            <div class="col">
-                <div class="row">
-                    <img src="images/sp_1.png">
-                </div>
-                <div class="row ghi-chu">
-                    <ul>
-                        <a href="#">IPHONE 7 PLUS</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
-                        <li>Giá: 18.000.000 VNĐ</li>
-                        <div class="addtocart">
-                            <a href="#">Mua hàng</a>
-                        </div>
-                    </ul>
-                </div>
-            </div>            
+            @endforeach
+            
         </div>
     </div>
     <div class="container-fluid san-pham">
         <div class="row justify-content-md-center san-pham-noi-bat">
-            <a href="#">Linh Phụ Kiện</a>
+            <a href="{{ route('trangphukien') }}">Linh Phụ Kiện</a>
         </div>
         <div class="row justify-content-md-center">
             <img src="images/icon_trang.png" alt="">
@@ -253,15 +129,17 @@
             @foreach($phukien as $sp)
             <div class="col">
                 <div class="row">
-                    <img src="images/sp_1.png">
+                    <div class="col home4">
+                        <img src="images/sanpham/{{ $sp->urlHinhSP }}">
+                    </div>
                 </div>
                 <div class="row ghi-chu">
                     <ul>
                         <a href="{{route('chitietsanpham', $sp->idSP)}}">{{$sp->TenSP}}</a>
-                        <li>Giá cũ: 20.000.000 VNĐ</li>
+                        <li>Giá cũ: {{number_format($sp->GiaCu)}} VNĐ</li>
                         <li>Giá: {{number_format($sp->GiaSP)}} VNĐ</li>
                         <div class="addtocart">
-                            <a href="#">Mua hàng</a>
+                            <a href="{{ route('muahang', $sp->idSP) }}">Mua hàng</a>
                         </div>
                     </ul>
                 </div>
